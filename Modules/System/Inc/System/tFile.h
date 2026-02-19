@@ -383,6 +383,7 @@ enum class tFileType
 	APNG,						// Image. Animated PNG.
 	GIF,						// Image. Graphics Interchange Format. Pronounced like the peanut butter.
 	WEBP,						// Image. Google Web Image.
+	AVIF,						// Image. AV1 Image File Format.
 	XPM,						// Image. X-Windows Pix Map.
 	JPG,						// Image. Joint Picture Motion Group (or something like that).
 	TIFF,						// Image. Tag Interchange File Format.

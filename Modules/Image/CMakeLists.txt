@@ -6,6 +6,7 @@ add_library(
 	Src/tCubemap.cpp
 	Src/tImageAPNG.cpp
 	Src/tImageASTC.cpp
+	Src/tImageAVIF.cpp
 	Src/tImageBMP.cpp
 	Src/tImageDDS.cpp
 	Src/tImageEXR.cpp
@@ -40,6 +41,7 @@ add_library(
 	Inc/Image/tFrame.h
 	Inc/Image/tImageAPNG.h
 	Inc/Image/tImageASTC.h
+	Inc/Image/tImageAVIF.h
 	Inc/Image/tImageBMP.h
 	Inc/Image/tImageDDS.h
 	Inc/Image/tImageEXR.h
@@ -242,6 +244,9 @@ target_link_libraries(
 		# LibTurboJPEG
 		$<$<PLATFORM_ID:Linux>:${CMAKE_CURRENT_SOURCE_DIR}/Contrib/TurboJpeg/Linux/libturbojpeg.a>
 		$<$<PLATFORM_ID:Windows>:${CMAKE_CURRENT_SOURCE_DIR}/Contrib/TurboJpeg/Windows/turbojpeg-static.lib>
+
+		# LibAVIF (using system library on Linux for now)
+		$<$<PLATFORM_ID:Linux>:avif>
 )
 
 tacent_install(${PROJECT_NAME})

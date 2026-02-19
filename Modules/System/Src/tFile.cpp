@@ -1881,6 +1881,7 @@ tSystem::FileTypeExts tSystem::FileTypeExtTable[] =
 	{ "apng" },							// APNG
 	{ "gif" },							// GIF
 	{ "webp" },							// WEBP
+	{ "avif" },							// AVIF
 	{ "xpm" },							// XPM
 	{ "jpg", "jpeg" },					// JPG
 	{ "tif", "tiff" },					// TIFF

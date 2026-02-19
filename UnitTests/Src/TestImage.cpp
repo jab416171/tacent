@@ -26,6 +26,7 @@
 #include <Image/tImagePNG.h>
 #include <Image/tImageQOI.h>
 #include <Image/tImageAPNG.h>
+#include <Image/tImageAVIF.h>
 #include <Image/tImageTGA.h>
 #include <Image/tImageWEBP.h>
 #include <Image/tImageXPM.h>
@@ -101,6 +102,11 @@ tTestUnit(ImageLoad)
 
 	tImageWEBP imgWEBP("TestData/Images/WEBP/RockyBeach.webp");
 	tRequire(imgWEBP.IsValid());
+
+	tImageAVIF imgAVIF("TestData/Images/TacentTestPattern.avif");
+	tRequire(imgAVIF.IsValid());
+	tRequire(imgAVIF.GetWidth() == 1280);
+	tRequire(imgAVIF.GetHeight() == 720);
 }
 
 
