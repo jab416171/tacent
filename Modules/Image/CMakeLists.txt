@@ -245,7 +245,9 @@ target_link_libraries(
 		$<$<PLATFORM_ID:Linux>:${CMAKE_CURRENT_SOURCE_DIR}/Contrib/TurboJpeg/Linux/libturbojpeg.a>
 		$<$<PLATFORM_ID:Windows>:${CMAKE_CURRENT_SOURCE_DIR}/Contrib/TurboJpeg/Windows/turbojpeg-static.lib>
 
-		# LibAVIF (using system library on Linux for now)
+		# LibAVIF
+		# Note: Currently using system library on Linux. Windows support requires adding precompiled
+		# libavif.lib to Contrib/LibAVIF/lib/ and updating this section.
 		$<$<PLATFORM_ID:Linux>:avif>
 )
 

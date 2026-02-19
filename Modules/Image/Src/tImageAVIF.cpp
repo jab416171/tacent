@@ -92,8 +92,9 @@ bool tImageAVIF::Load(const uint8* avifFileInMemory, int numBytes)
 	PixelFormatSrc = hasAlpha ? tPixelFormat::R8G8B8A8 : tPixelFormat::R8G8B8;
 	PixelFormat = tPixelFormat::R8G8B8A8;
 
-	// AVIF files can have different color profiles, but we'll assume sRGB for now
-	// In the future, we could check image->colorPrimaries, image->transferCharacteristics, etc.
+	// @todo Add proper color profile detection based on image->colorPrimaries and image->transferCharacteristics.
+	// Currently we assume sRGB which is correct for most AVIF files, but some may use different profiles.
+	// For now, we default to sRGB to match the behavior of other image loaders in this library.
 	ColourProfileSrc = tColourProfile::sRGB;
 	ColourProfile = tColourProfile::sRGB;
 
